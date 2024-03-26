@@ -1,0 +1,26 @@
+name: CI workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: A job to build code
+
+    steps:
+      - name: Install dependances
+        run: echo "Hello, I'm Installing the dependances of your code!"
+
+      - name: Testing
+        run: echo "Testing the code"
+        
+      - name: Packaging 
+        run: echo "Packaging the image"
+        
+  Publish:
+    runs-on: ubuntu-latest
+    name: A job to Publish code
+
+    steps:
+      - name: Publishing the Image
+        run: echo "Publishing the final image"
